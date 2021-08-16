@@ -1,0 +1,18 @@
+.backdrop {
+    background-color: #282c34;
+    position: relative;
+    min-height: 100vh;
+}
+
+.main {
+    margin: auto;
+    padding: 5rem 0;
+    width: 90%;
+    max-width: 80rem;
+}
+
+Footer {
+    position: absolute;
+    bottom: 0;
+    height: 2.5rem;
+}

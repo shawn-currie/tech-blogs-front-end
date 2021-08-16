@@ -1,0 +1,67 @@
+.blog{
+    margin: 1rem 0;
+    list-style: none;
+}
+
+.logo{
+    float: left;
+    max-height: 128px;
+    max-width: 128px;
+}
+
+.logo img{
+    max-height: 100%;
+    max-width: 100%;
+    /*probably don't want this long term*/
+    border-radius: 5px 0 0 5px;
+}
+
+.favoriteImage {
+    max-height: 50px;
+    max-width: 50px;
+    position: relative;
+    bottom: 35px;
+    right: 3px;
+}
+
+.title{
+    text-align: center;
+    padding: 1rem;
+    height: 5rem;
+    font-size: 1.2rem;
+    overflow: hidden;
+}
+
+.titleLink {
+    text-decoration: none;
+}
+a:link,
+a:visited {
+    color: #282c34;
+}
+
+.articleInfo {
+    font-size: .8rem;
+    display: flex;
+    justify-content: space-between;
+    height: 1rem;
+    background-color: #edf0f2;
+    border-radius: 0 0 6px 0;
+}
+
+.articleInfo ul {
+    display: flex;
+    justify-content: left;
+    list-style: none;
+}
+
+.articleInfo li {
+    padding: 0 1rem;
+}
+
+.articleInfo li a{
+    text-decoration: none;
+}
+
+.actions{
+}
