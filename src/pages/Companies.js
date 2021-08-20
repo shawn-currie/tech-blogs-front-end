@@ -20,6 +20,9 @@ function CompaniesPage() {
             return response.json()
         }).then(data => {
             setIsLoading(false)
+            data.sort((a, b) => {
+                return("" + a.name).localeCompare(b.name)
+            })
             setLoadedCompanies(data)
         })
     }, [])
