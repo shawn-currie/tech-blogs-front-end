@@ -1,0 +1,4 @@
+.companyList {
+    display: flex;
+    flex-wrap: wrap;
+}

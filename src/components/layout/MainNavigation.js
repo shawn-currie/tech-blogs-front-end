@@ -12,6 +12,9 @@ function MainNavigation() {
                         <Link to="/" className={classes.badge}>Blog Feed</Link>
                     </li>
                     <li>
+                        <Link to="/companies" className={classes.badge}>Companies</Link>
+                    </li>
+                    <li>
                         <Link to="/favorites" className={classes.badge}>Favorites</Link>
                     </li>
                 </ul>
