@@ -6,8 +6,7 @@ function BlogList(props) {
         <ul className={classes.blogList}>
             {props.blogs.map(blog => (
                 <BlogItem
-                    key={blog.id}
-                    id={blog.id}
+                    key={blog.title}
                     title={blog.title}
                     url={blog.url}
                     image={blog.image}
