@@ -5,8 +5,8 @@ function Footer() {
         <footer>
             <ul className={classes.footerList}>
                 <li>
-                    <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
-                        Github?
+                    <a href="https://github.com/shawn-currie?tab=repositories" target="_blank" rel="noopener noreferrer">
+                        Github
                     </a>
                 </li>
                 <li>
