@@ -2,23 +2,16 @@ import {useState, useEffect} from 'react';
 
 import BlogList from "../components/blogs/BlogList";
 
-import riotGamesLogo from '../images/riotgames.jpg'
-import facebookLogo from '../images/facebook.jpg'
-
-const LOGOS = {
-    "Riot Games": riotGamesLogo,
-    "Facebook": facebookLogo
-}
 
 const LOADING_DATA = [
     {
         title: "LOADING BLOGS...",
-        companyName: "loading company...",
         url: "/",
-        companyUrl: "https://www.google.com",
         date: "loading date...",
-        image: "https://i.redd.it/gj1t3nckxyx61.png",
-        id: 0
+        company: {
+            companyName: "loading company...",
+            companyUrl: "https://www.google.com",
+        }
     }
 ]
 
@@ -53,16 +46,10 @@ function BlogFeedPage() {
         }).then((data) => {
             setIsLoading(false);
 
-            data.forEach(dataPoint => {
-                dataPoint["companyLogo"] = LOGOS[dataPoint.companyName]
-                console.log(dataPoint["companyLogo"])
-            })
-
             if (data.length < PAGE_SIZE) {
                 setBlogsRemaining(false);
             }
 
-            console.log(data);
             addBlogData(data);
         })
     }, [pageNumber]);

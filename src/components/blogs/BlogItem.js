@@ -1,16 +1,16 @@
 import Card from "../ui/Card";
 import classes from './BlogItem.module.css'
+import {COMPANY_LOGOS} from "../../utilites/companyLogos";
 
 // TODO: add CSS, classes and CSS file 206
 // TODO: change the links
 
 function BlogItem(props) {
-    const images = require.context("../../images", true)
     return (
         <li className={classes.blog}>
             <Card>
                 <a href={props.companyUrl} target="_blank" rel="noopener noreferrer" className={classes.logo}>
-                    <img src={props.companyLogo}
+                    <img src={COMPANY_LOGOS[props.companyName]}
                          alt={props.companyName}/>
                 </a>
                 <a href={props.url} target="_blank" rel="noopener noreferrer" className={classes.titleLink}>

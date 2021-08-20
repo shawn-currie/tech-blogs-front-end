@@ -2,7 +2,6 @@ import classes from './BlogList.module.css'
 import BlogItem from "./BlogItem";
 
 function BlogList(props) {
-    console.log(props.blogs);
     return (
         <ul className={classes.blogList}>
             {props.blogs.map(blog => (
@@ -13,9 +12,8 @@ function BlogList(props) {
                     url={blog.url}
                     image={blog.image}
                     date={blog.date}
-                    companyName={blog.companyName}
-                    companyUrl={blog.companyUrl}
-                    companyLogo={blog.companyLogo}
+                    companyName={blog.company.name}
+                    companyUrl={blog.company.url}
                 />
             ))}
             {props.blogsRemaining ?
@@ -29,10 +27,5 @@ function BlogList(props) {
         </ul>
     )
 }
-
-/*
-  loadNewPage={loadNewPage}
-  blogsRemaining={blogsRemaining}
- */
 
 export default BlogList;
