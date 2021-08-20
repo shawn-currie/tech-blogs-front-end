@@ -17,12 +17,12 @@ function BlogList(props) {
                 />
             ))}
             {props.blogsRemaining ?
-                <li>
+                <li className={classes.loadMore}>
                     <button onClick={props.loadNewPage}>
                         Load More Blogs
                     </button>
                 </li>
-                :<p>No More Blogs...</p>
+                :<p className={classes.noneRemaining}>No More Blogs...</p>
             }
         </ul>
     )

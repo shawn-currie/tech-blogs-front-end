@@ -1,3 +1,17 @@
 .blogList {
     padding: 0;
 }
+
+.loadMore {
+    display: flex;
+    justify-content: center;
+}
+
+.loadMore button{
+    width: 20rem;
+}
+
+.noneRemaining{
+    display: flex;
+    justify-content: center;
+}
