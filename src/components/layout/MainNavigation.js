@@ -9,13 +9,13 @@ function MainNavigation() {
             <nav>
                 <ul>
                     <li>
-                        <Link to="/" className={classes.badge}>Blog Feed</Link>
-                    </li>
-                    <li>
-                        <Link to="/companies" className={classes.badge}>Companies</Link>
+                        <Link to="/" className={classes.badge}>Default Feed</Link>
                     </li>
                     <li>
                         <Link to="/favorites" className={classes.badge}>Favorites</Link>
+                    </li>
+                    <li>
+                        <Link to="/companies" className={classes.badge}>Companies</Link>
                     </li>
                 </ul>
             </nav>

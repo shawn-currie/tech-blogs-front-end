@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 
-import BlogList from "../components/blogs/BlogList";
+import BlogList from "./BlogList";
 
 
 const LOADING_DATA = [
@@ -15,9 +15,7 @@ const LOADING_DATA = [
     }
 ]
 
-// TODO: I need company logo for each article, company website, blog url, and what is provided above
-
-function BlogFeedPage() {
+function BlogFeed(props) {
     const [isLoading, setIsLoading] = useState(true);
     const [loadedBlogs, setLoadedBlogs] = useState([]);
     const [blogsRemaining, setBlogsRemaining] = useState(true);
@@ -40,7 +38,7 @@ function BlogFeedPage() {
 
     useEffect(() => {
         fetch(
-            'http://localhost:8080/tech-blogs/blogs?page=' + pageNumber + '&limit=' + PAGE_SIZE, {mode: 'cors'}
+            props.dataSource + '?page=' + pageNumber + '&limit=' + PAGE_SIZE, {mode: 'cors'}
         ).then(response => {
             return response.json();
         }).then((data) => {
@@ -55,14 +53,11 @@ function BlogFeedPage() {
     }, [pageNumber]);
 
     return (
-        <section>
-            <h1>Blog Feed</h1>
-            <BlogList blogs={isLoading ? LOADING_DATA : loadedBlogs}
-                      loadNewPage={loadNewPage}
-                      blogsRemaining={blogsRemaining}
-            />
-        </section>
+        <BlogList blogs={isLoading ? LOADING_DATA : loadedBlogs}
+                  loadNewPage={loadNewPage}
+                  blogsRemaining={blogsRemaining}
+        />
     );
 }
 
-export default BlogFeedPage;
+export default BlogFeed;

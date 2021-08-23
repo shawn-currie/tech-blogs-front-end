@@ -1,6 +1,8 @@
+import BlogFeedPage from "../components/blogs/BlogFeed";
+
 function FavoritesPage() {
     return (
-        <div>Favorite Blogs! Coming soon...</div>
+        <BlogFeedPage dataSource = 'http://localhost:8080/tech-blogs/blogs/favorites/1'/>
     );
 }
 
