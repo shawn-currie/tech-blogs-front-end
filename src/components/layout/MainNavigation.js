@@ -5,11 +5,11 @@ import classes from './MainNavigation.module.css'
 function MainNavigation() {
     return (
         <header className={classes.header}>
-            <div className={classes.logo}>Tech Blogs</div>
+            <div className={classes.logo}>TechBlogs</div>
             <nav>
                 <ul>
                     <li>
-                        <Link to="/" className={classes.badge}>Default Feed</Link>
+                        <Link to="/" className={classes.badge}>Feed</Link>
                     </li>
                     <li>
                         <Link to="/favorites" className={classes.badge}>Favorites</Link>

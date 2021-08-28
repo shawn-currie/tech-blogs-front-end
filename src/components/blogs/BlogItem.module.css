@@ -16,13 +16,13 @@
     border-radius: 5px 0 0 5px;
 }
 
-.favoriteImage {
-    max-height: 50px;
-    max-width: 50px;
-    position: relative;
-    bottom: 35px;
-    right: 3px;
-}
+/*.favoriteImage {*/
+/*    max-height: 50px;*/
+/*    max-width: 50px;*/
+/*    position: relative;*/
+/*    bottom: 35px;*/
+/*    right: 3px;*/
+/*}*/
 
 .title{
     text-align: center;

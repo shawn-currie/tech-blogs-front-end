@@ -1,6 +1,7 @@
 import Card from "../ui/Card";
 import classes from './BlogItem.module.css'
 import {COMPANY_LOGOS} from "../../utilites/companyLogos";
+import FavoriteButton from "./FavoriteButton";
 
 // TODO: add CSS, classes and CSS file 206
 // TODO: change the links
@@ -28,9 +29,7 @@ function BlogItem(props) {
                         </li>
                         <li>{"Date: " + props.date}</li>
                     </ul>
-                    <div className={classes.actions}>
-                        <img className={classes.favoriteImage} src={"https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678064-star-512.png"} alt={"favorite"}/>
-                    </div>
+                    <FavoriteButton favorite = {props.favorite}/>
                 </section>
             </Card>
         </li>

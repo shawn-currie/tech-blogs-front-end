@@ -8,6 +8,7 @@ const LOADING_DATA = [
         title: "LOADING BLOGS...",
         url: "/",
         date: "loading date...",
+        favorite: false,
         company: {
             companyName: "loading company...",
             companyUrl: "https://www.google.com",

@@ -11,6 +11,7 @@ function BlogList(props) {
                     url={blog.url}
                     image={blog.image}
                     date={blog.date}
+                    favorite={blog.favorite}
                     companyName={blog.company.name}
                     companyUrl={blog.company.url}
                 />
