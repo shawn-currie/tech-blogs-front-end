@@ -7,9 +7,32 @@ function FavoriteButton(props) {
 
     const [isFavorite, setFavorite] = useState(props.favorite);
 
+    function persistFavorite() {
+        fetch(`http://localhost:8080/tech-blogs/users/1/favorites/${props.id}`, {
+            method: 'POST',
+            mode: 'cors'
+        }).then(response => {
+            // update to the correct state?
+        })
+    }
+
+    function removeFavorite() {
+        fetch(`http://localhost:8080/tech-blogs/users/1/favorites/${props.id}`, {
+            method: 'DELETE',
+            mode: 'cors'
+        }).then(response => {
+            // update to the correct state?
+        })
+    }
+
     function handleClick() {
         setFavorite((prevState) => {
-            // handle kicking off the save favorite functions
+            if (prevState) {
+                removeFavorite()
+            } else {
+                persistFavorite()
+            }
+
             return !prevState;
         })
     }

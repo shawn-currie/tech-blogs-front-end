@@ -5,6 +5,7 @@ import BlogList from "./BlogList";
 
 const LOADING_DATA = [
     {
+        id: -1,
         title: "LOADING BLOGS...",
         url: "/",
         date: "loading date...",

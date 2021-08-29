@@ -29,7 +29,7 @@ function BlogItem(props) {
                         </li>
                         <li>{"Date: " + props.date}</li>
                     </ul>
-                    <FavoriteButton favorite = {props.favorite}/>
+                    <FavoriteButton favorite = {props.favorite} id = {props.id} />
                 </section>
             </Card>
         </li>
