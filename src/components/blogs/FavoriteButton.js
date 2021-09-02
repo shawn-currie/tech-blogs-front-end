@@ -1,4 +1,5 @@
 import {useState} from "react";
+import classes from "./FavoriteButton.module.css";
 import emptyHeart from "../../images/heartEmptyBig.jpg"
 import fullHeart from "../../images/heartFullBig.jpg"
 
@@ -38,7 +39,7 @@ function FavoriteButton(props) {
     }
 
     return (
-        <img onClick={handleClick} src={isFavorite ? fullHeart : emptyHeart} alt={"favorite"}/>
+        <img className={classes.favoriteIcon} onClick={handleClick} src={isFavorite ? fullHeart : emptyHeart} alt={"favorite"}/>
     )
 }
 
